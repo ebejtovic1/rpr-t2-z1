@@ -38,6 +38,11 @@ public class Student {
     public String toString() {
         return prezime +" "+ ime + " (" + index + ")";
     }
+    public void obrisiStudenta() {
+        this.ime = "";
+        this.prezime = "";
+        this.index = 0;
+    }
 
 
 

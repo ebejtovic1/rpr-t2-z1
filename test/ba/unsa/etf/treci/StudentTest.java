@@ -44,4 +44,15 @@ class StudentTest {
         s1.setIndex(17770);
         assertEquals(17770,s1.getIndex() );
     }
+
+    @Test
+    void toStringTest() {
+        Student s1 = new Student("Elma","Bejtovic",17770);
+        Student s2 = new Student("Elma","elma",10000);
+        assertAll("TestToString",
+                () -> assertEquals("Bejtovic Elma (17770)", s1.toString()),
+                () -> assertNotEquals("Elma elma 10000", s2.toString())
+        );
+
+    }
 }

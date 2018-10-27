@@ -61,6 +61,12 @@ public class Predmet {
         }
         brojStudenata--;
     }
+    public void obrisiPredmet() {
+        this.nazivPredmeta = null;
+        this.sifra_Predmeta = 0;
+        this.nizStudenata = null;
+        this.brojStudenata = 0;
+    }
 
 
     @Override
