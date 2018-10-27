@@ -1,7 +1,6 @@
 package ba.unsa.etf.treci;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class PredmetTest {
@@ -54,5 +53,20 @@ class PredmetTest {
         Predmet p =new Predmet("Matematika",10,10);
         p.upisiStudenta(s1);
         assertEquals("Elmaaaa",p.nizStudenata[0].getIme());
+    }
+
+    void toStringTest(){
+        Predmet p = new Predmet("RPR",100,100);
+        Student s1 = new Student("Elma","Bejtovic",17770);
+        Student s2 = new Student("Anida","Mujezin",17772);
+        Student s3 = new Student("Merima","Sehic",17771);
+        p.upisiStudenta(s1);
+        p.upisiStudenta(s2);
+        p.upisiStudenta(s3);
+        assertAll("TestiranjeToString",
+                () -> assertEquals("1. Bejtovic Elma(17770)\n2. Mujezin Anida(17772)\n3. Sehic Merima (17771)\n", p.toString()),
+                () -> assertNotEquals("1. Elma Bejtovic (17770)\n2. Anida Mujezin (17772)\n3. Merima Sehic (17771)\n", p.toString())
+        );
+
     }
 }
