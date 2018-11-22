@@ -39,7 +39,7 @@ public class Predmet {
     }
 
     public int getMax_Br ( ) {
-        return max_Br;
+        return max_Br;      
     }
     public void upisiStudenta(Student s){
         if(brojStudenata<max_Br){
